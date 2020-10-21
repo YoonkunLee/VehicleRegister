@@ -9,6 +9,10 @@
     <ProjectReference Include="..\VehicleRegister\VehicleRegister.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\CategoryIcon\" />
+  </ItemGroup>
+
 
 
 </Project>
