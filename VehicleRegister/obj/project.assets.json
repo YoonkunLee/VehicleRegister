@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Yoonkun Lee\\Desktop\\projects\\New Delhi\\VehicleRegister\\VehicleRegister\\VehicleRegister\\VehicleRegister.csproj",
+      "projectUniqueName": "C:\\Users\\Yoonkun Lee\\Desktop\\projects\\New Delhi\\VehicleRegister\\VehicleRegister\\VehicleRegister.csproj",
       "projectName": "VehicleRegister",
-      "projectPath": "C:\\Users\\Yoonkun Lee\\Desktop\\projects\\New Delhi\\VehicleRegister\\VehicleRegister\\VehicleRegister\\VehicleRegister.csproj",
+      "projectPath": "C:\\Users\\Yoonkun Lee\\Desktop\\projects\\New Delhi\\VehicleRegister\\VehicleRegister\\VehicleRegister.csproj",
       "packagesPath": "C:\\Users\\Yoonkun Lee\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Yoonkun Lee\\Desktop\\projects\\New Delhi\\VehicleRegister\\VehicleRegister\\VehicleRegister\\obj\\",
+      "outputPath": "C:\\Users\\Yoonkun Lee\\Desktop\\projects\\New Delhi\\VehicleRegister\\VehicleRegister\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -1,0 +1,6 @@
+This file announce which NugetPackage was installed in projects
+
+VehicleRegister.Data.MSSQL
+1. Microsoft.EntityFrameworkCore                 v 3.1.9
+2. Microsoft.EntityFrameworkCore.Tools			 v 3.1.9
+3. Mircosoft.EntityFrameworkCore.SqlServer		 v 3.1.9
