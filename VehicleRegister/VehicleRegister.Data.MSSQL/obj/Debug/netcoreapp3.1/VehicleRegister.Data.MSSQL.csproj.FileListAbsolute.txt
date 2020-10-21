@@ -1,0 +1,11 @@
+C:\Users\Yoonkun Lee\Desktop\projects\New Delhi\VehicleRegister\VehicleRegister\VehicleRegister.Data.MSSQL\bin\Debug\netcoreapp3.1\VehicleRegister.Data.MSSQL.exe
+C:\Users\Yoonkun Lee\Desktop\projects\New Delhi\VehicleRegister\VehicleRegister\VehicleRegister.Data.MSSQL\bin\Debug\netcoreapp3.1\VehicleRegister.Data.MSSQL.deps.json
+C:\Users\Yoonkun Lee\Desktop\projects\New Delhi\VehicleRegister\VehicleRegister\VehicleRegister.Data.MSSQL\bin\Debug\netcoreapp3.1\VehicleRegister.Data.MSSQL.runtimeconfig.json
+C:\Users\Yoonkun Lee\Desktop\projects\New Delhi\VehicleRegister\VehicleRegister\VehicleRegister.Data.MSSQL\bin\Debug\netcoreapp3.1\VehicleRegister.Data.MSSQL.runtimeconfig.dev.json
+C:\Users\Yoonkun Lee\Desktop\projects\New Delhi\VehicleRegister\VehicleRegister\VehicleRegister.Data.MSSQL\bin\Debug\netcoreapp3.1\VehicleRegister.Data.MSSQL.dll
+C:\Users\Yoonkun Lee\Desktop\projects\New Delhi\VehicleRegister\VehicleRegister\VehicleRegister.Data.MSSQL\bin\Debug\netcoreapp3.1\VehicleRegister.Data.MSSQL.pdb
+C:\Users\Yoonkun Lee\Desktop\projects\New Delhi\VehicleRegister\VehicleRegister\VehicleRegister.Data.MSSQL\obj\Debug\netcoreapp3.1\VehicleRegister.Data.MSSQL.csprojAssemblyReference.cache
+C:\Users\Yoonkun Lee\Desktop\projects\New Delhi\VehicleRegister\VehicleRegister\VehicleRegister.Data.MSSQL\obj\Debug\netcoreapp3.1\VehicleRegister.Data.MSSQL.AssemblyInfoInputs.cache
+C:\Users\Yoonkun Lee\Desktop\projects\New Delhi\VehicleRegister\VehicleRegister\VehicleRegister.Data.MSSQL\obj\Debug\netcoreapp3.1\VehicleRegister.Data.MSSQL.AssemblyInfo.cs
+C:\Users\Yoonkun Lee\Desktop\projects\New Delhi\VehicleRegister\VehicleRegister\VehicleRegister.Data.MSSQL\obj\Debug\netcoreapp3.1\VehicleRegister.Data.MSSQL.dll
+C:\Users\Yoonkun Lee\Desktop\projects\New Delhi\VehicleRegister\VehicleRegister\VehicleRegister.Data.MSSQL\obj\Debug\netcoreapp3.1\VehicleRegister.Data.MSSQL.pdb
