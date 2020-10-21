@@ -4,7 +4,8 @@ using System.Text;
 
 namespace VehicleRegister.ViewModel
 {
-    class ManufacturerView
+    public class ManufacturerView
     {
+        public string name { get; set; }
     }
 }

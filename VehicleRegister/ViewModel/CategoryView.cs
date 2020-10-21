@@ -4,7 +4,8 @@ using System.Text;
 
 namespace VehicleRegister.ViewModel
 {
-    class CategoryViewModel
+    public class CategoryView
     {
+        
     }
 }

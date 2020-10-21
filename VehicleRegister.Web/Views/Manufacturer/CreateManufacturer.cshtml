@@ -1,0 +1,14 @@
+﻿@model VehicleRegister.Model.Manufacturer
+@{
+    ViewData["Title"] = "CreateManufacturer";
+}
+
+<h1>CreateManufacturer</h1>
+
+@using (Html.BeginForm("Create", "Manufacturer", FormMethod.Post))
+{
+    @Html.LabelFor(m => m.Name);
+    @Html.TextBoxFor(m => m.Name);
+
+    <input type="submit" value="Submit" />
+}
