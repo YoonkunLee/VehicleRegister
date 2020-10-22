@@ -12,11 +12,40 @@ namespace VehicleRegister.ServiceLayer
         {
             Category newCategory = new Category();
 
+            if(category.Id == null)
+            {
+                newCategory.Id = Guid.NewGuid();
+            }
+            else
+            {
+                newCategory.Id = category.Id;
+            }
 
-            //Todo: Add Code here
-
+            newCategory.Name = category.Name;
+            newCategory.StartRange = category.StartRange;
+            newCategory.FinishRange = category.FinishRange;
+            newCategory.IconPath = category.IconPath;
 
             return newCategory;
+        }
+
+        public List<CategoryListView> ConvertDataModelToListView(List<Category> categories)
+        {
+            List<CategoryListView> listView = new List<CategoryListView>();
+            
+            for(var i = 0; i < categories.Count; i++)
+            {
+                CategoryListView item = new CategoryListView();
+                item.Id = categories[i].Id;
+                item.Name = categories[i].Name;
+                item.StartRange = categories[i].StartRange;
+                item.FinishRange = categories[i].FinishRange;
+                item.IconPath = "/CategoryIcon/" + categories[i].IconPath;
+                item.IndexNumber = i + 1;
+                listView.Add(item);
+            }
+
+            return listView;
         }
     }
 }

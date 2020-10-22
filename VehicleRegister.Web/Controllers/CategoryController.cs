@@ -18,14 +18,15 @@ namespace VehicleRegister.Web.Controllers
         CategoryService _service;
         public CategoryController()
         {
-            _data = new DataContext1();
             _category = new CategoryDataAccess();
             _service = new CategoryService();
         }
 
         public IActionResult Index()
         {
-            return View();
+            var categories = _category.CollectCategoryList();
+            var categoriesView = _service.ConvertDataModelToListView(categories);
+            return View(categoriesView);
         }
 
         public IActionResult CreateCategory()
@@ -33,10 +34,11 @@ namespace VehicleRegister.Web.Controllers
             return View();
         }
 
-        public IActionResult AddCategory(CategoryView category)
+        public IActionResult Create(CategoryView category)
         {
-            var id = _service.ConvertViewToData(category);
-
+            var newCategory = _service.ConvertViewToData(category);
+            _category.Add(newCategory);
+           
             return View("Index");
         }
     }

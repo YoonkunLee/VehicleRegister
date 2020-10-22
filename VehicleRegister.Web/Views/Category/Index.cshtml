@@ -1,7 +1,36 @@
-﻿
+﻿@model List<VehicleRegister.ViewModel.CategoryListView>
 @{
     ViewData["Title"] = "Index";
 }
 
 <h1>Index</h1>
+@Html.ActionLink("Create", "CreateCategory", "Category")
+<table>
+    <thead>
+        <tr>
+            <td>No.</td>
+            <td>Name</td>
+            <td>StartRange</td>
+            <td>FinishRange</td>
+            <td>Category Icon</td>
+            <td>Fucntions</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+        <tr>
+            <td>@item.IndexNumber</td>
+            <td>@item.Name</td>
+            <td>@item.StartRange</td>
+            <td>@item.FinishRange</td>
+            <td><img src="@item.IconPath" /></td>
+            <td>
+                @Html.ActionLink("Update", "UpdateCategory", "Category", new { id = item.Id })
+                @Html.ActionLink("Delete", "DeleteCategory", "Category", new { id = item.Id })
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
 

@@ -13,7 +13,7 @@ namespace VehicleRegister.Model
         public string Name { get; set; }
         [Required]
         public int StartRange { get; set; }
-        [Required]
+
         public int FinishRange { get; set; }
         [Required]
         public string IconPath { get; set; }
