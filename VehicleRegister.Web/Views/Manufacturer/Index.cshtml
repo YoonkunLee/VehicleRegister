@@ -1,7 +1,34 @@
-﻿
+﻿@model List<VehicleRegister.ViewModel.ManufacturerListView>;
 @{
     ViewData["Title"] = "Index";
 }
 
 <h1>Index</h1>
+
+<a href='@Url.Action("CreateManufacturer","Manufacturer")'>
+    <input type="button" value="Create" />
+</a>
+
+<table>
+    <thead>
+        <tr>
+            <td>No.</td>
+            <td>Manufacturer</td>
+            <td>Functions</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.IndexNumber</td>
+                <td>@item.Name</td>
+                <td>
+                    @Html.ActionLink("Update", "UpdateManufacturer", "Manufacturer", new { id = item.Id }) 
+                    @Html.ActionLink("Delete", "DeleteManufacturer", "Manufacturer", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
 

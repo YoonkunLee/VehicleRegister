@@ -4,9 +4,10 @@ using System.Text;
 
 namespace VehicleRegister.ViewModel
 {
-    public class ManufacturerView
+    public class ManufacturerListView
     {
         public Guid Id { get; set; }
-        public string name { get; set; }
+        public string Name { get; set; }
+        public int IndexNumber { get; set; }
     }
 }
