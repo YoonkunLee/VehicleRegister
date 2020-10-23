@@ -29,5 +29,29 @@ namespace VehicleRegister.Data.MSSQL.DataAccess
 
             return result;
         }
+
+        public Category Find(Guid id)
+        {
+            DataContext1 context = new DataContext1();
+            var item = context.Categories.First<Category>(m => m.Id == id);
+            return item;
+        }
+
+        public void Update(Category category)
+        {
+            DataContext1 context = new DataContext1();
+            var item = Find(category.Id);
+            item = category;
+            context.Update(item);
+            context.SaveChanges();
+        }
+
+        public void Delete(Guid id)
+        {
+            DataContext1 context = new DataContext1();
+            var item = Find(id);
+            context.Categories.Remove(item);
+            context.SaveChanges();
+        }
     }
 }

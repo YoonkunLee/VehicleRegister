@@ -44,7 +44,7 @@ namespace VehicleRegister.Web.Controllers
                 throw e;
             }
 
-            return RedirectToAction("Index", "Manufacturer"); ;
+            return RedirectToAction("Index", "Manufacturer");
         }
 
         public IActionResult CreateManufacturer()

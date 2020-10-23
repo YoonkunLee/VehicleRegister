@@ -47,5 +47,17 @@ namespace VehicleRegister.ServiceLayer
 
             return listView;
         }
+
+        public CategoryView ConvertDataModelToView(Category categories)
+        {          
+            CategoryView item = new CategoryView();
+            item.Id = categories.Id;
+            item.Name = categories.Name;
+            item.StartRange = categories.StartRange;
+            item.FinishRange = categories.FinishRange;
+            item.IconPath = categories.IconPath;
+                       
+            return item;
+        }
     }
 }

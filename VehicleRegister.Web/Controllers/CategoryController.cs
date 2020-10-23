@@ -13,7 +13,6 @@ namespace VehicleRegister.Web.Controllers
 {
     public class CategoryController : Controller
     {       
-        DataContext1 _data;
         CategoryDataAccess _category;
         CategoryService _service;
         public CategoryController()
@@ -38,8 +37,31 @@ namespace VehicleRegister.Web.Controllers
         {
             var newCategory = _service.ConvertViewToData(category);
             _category.Add(newCategory);
-           
-            return View("Index");
+
+            return RedirectToAction("Index", "Category");
+        }
+
+        public IActionResult UpdateCategory(Guid id)
+        {
+            var item = _category.Find(id);
+            var ViewItem = _service.ConvertDataModelToView(item);
+            return View(ViewItem);
+        }
+        [HttpPost]
+        [Route("/Category/UpdateCategory/{id}")]
+        public IActionResult UpdateCategory(CategoryView category)
+        {
+            var categoryData = _service.ConvertViewToData(category);
+            _category.Update(categoryData);
+            
+            return RedirectToAction("Index", "Category");
+        }
+
+        public IActionResult DeleteCategory(Guid id)
+        {
+            _category.Delete(id);
+
+            return RedirectToAction("Index", "Category");
         }
     }
 }

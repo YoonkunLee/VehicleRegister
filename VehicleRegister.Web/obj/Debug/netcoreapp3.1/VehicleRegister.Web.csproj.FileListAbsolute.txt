@@ -190,3 +190,4 @@ C:\Users\Yoonkun Lee\Desktop\projects\New Delhi\VehicleRegister\VehicleRegister.
 C:\Users\Yoonkun Lee\Desktop\projects\New Delhi\VehicleRegister\VehicleRegister.Web\obj\Debug\netcoreapp3.1\Razor\Views\Manufacturer\CreateManufacturer.cshtml.g.cs
 C:\Users\Yoonkun Lee\Desktop\projects\New Delhi\VehicleRegister\VehicleRegister.Web\obj\Debug\netcoreapp3.1\Razor\Views\Manufacturer\Index.cshtml.g.cs
 C:\Users\Yoonkun Lee\Desktop\projects\New Delhi\VehicleRegister\VehicleRegister.Web\obj\Debug\netcoreapp3.1\Razor\Views\Manufacturer\UpdateManufacturer.cshtml.g.cs
+C:\Users\Yoonkun Lee\Desktop\projects\New Delhi\VehicleRegister\VehicleRegister.Web\obj\Debug\netcoreapp3.1\Razor\Views\Category\UpdateCategory.cshtml.g.cs

@@ -1,0 +1,19 @@
+﻿@model VehicleRegister.ViewModel.CategoryView
+@{
+    ViewData["Title"] = "UpdateCategory";
+}
+
+<h1>UpdateCategory</h1>
+@using (Html.BeginForm("UpdateCategory", "Category", FormMethod.Post))
+{
+    @Html.LabelFor(m => m.Name)
+    @Html.TextBoxFor(m => m.Name)
+    @Html.LabelFor(m => m.StartRange)
+    @Html.TextBoxFor(m => m.StartRange)
+    @Html.LabelFor(m => m.FinishRange)
+    @Html.TextBoxFor(m => m.FinishRange)
+    @Html.LabelFor(m => m.IconPath)
+    @Html.TextBoxFor(m => m.IconPath)
+
+    <input type="submit" value="Submit" />
+}
