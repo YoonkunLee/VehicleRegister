@@ -1,0 +1,39 @@
+﻿@model List<VehicleRegister.ViewModel.RegisteredVehicleListView>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+@Html.ActionLink("Create", "CreateRegistedVehical", "RegistedVehicle")
+<table>
+    <thead>
+        <tr>
+            <td>No.</td>
+            <td>Owner</td>
+            <td>Manufacturer</td>
+            <td>Year</td>
+            <td>Weight</td>
+            <td>Category</td>
+            <td>Category Icon</td>
+            <td>Fucntions</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.IndexNumber</td>
+            <td>@item.OwnerName</td>
+            <td>@item.Manufacturer</td>
+            <td>@item.Year</td>
+            <td>@item.Weight</td>
+            <td>@item.Category</td>
+            <td><img src="@item.IconPath" /></td>
+            <td>
+                @Html.ActionLink("Update", "UpdateRegistedVehicle", "RegistedVehicle", new { id = item.Id })
+                @Html.ActionLink("Delete", "DeleteRegistedVehicle", "RegistedVehicle", new { id = item.Id })
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

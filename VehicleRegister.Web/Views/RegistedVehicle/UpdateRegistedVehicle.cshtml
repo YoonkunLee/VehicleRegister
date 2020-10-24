@@ -1,0 +1,20 @@
+﻿@model VehicleRegister.ViewModel.RegisteredVehicleView
+@{
+    ViewData["Title"] = "UpdateRegistedVehicle";
+}
+
+<h1>UpdateRegistedVehicle</h1>
+
+@using (Html.BeginForm("UpdateRegistedVehicle", "RegistedVehicle", FormMethod.Post))
+{
+    @Html.LabelFor(m => m.OwnerName)
+    @Html.TextBoxFor(m => m.OwnerName)
+    @Html.LabelFor(m => m.Manufacturer)
+    @Html.TextBoxFor(m => m.Manufacturer)
+    @Html.LabelFor(m => m.Year)
+    @Html.TextBoxFor(m => m.Year)
+    @Html.LabelFor(m => m.Weight)
+    @Html.TextBoxFor(m => m.Weight)
+
+    <input type="submit" value="Submit" />
+}

@@ -9,7 +9,7 @@ namespace VehicleRegister.ViewModel
         public Guid Id { get; set; }
         public string Name { get; set; }
         public int StartRange { get; set; }
-        public int FinishRange { get; set; }
+        public int? FinishRange { get; set; }
         public string IconPath { get; set; }
     }
 }

@@ -4,10 +4,12 @@ using System.Text;
 
 namespace VehicleRegister.ViewModel
 {
-    class RegisteredVehicleView
+    public class RegisteredVehicleView
     {
         public Guid Id { get; set; }
-        public string Name { get; set; }
-        public int IndexNumber { get; set; }
+        public string OwnerName { get; set; }
+        public string Manufacturer { get; set; }
+        public string Year { get; set; }
+        public float Weight { get; set; }
     }
 }

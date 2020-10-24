@@ -10,7 +10,7 @@ namespace VehicleRegister.ViewModel
         public string Name { get; set; }
         public int IndexNumber { get; set; }
         public int StartRange { get; set; }
-        public int FinishRange { get; set; }
+        public int? FinishRange { get; set; }
         public string IconPath { get; set; }
     }
 }

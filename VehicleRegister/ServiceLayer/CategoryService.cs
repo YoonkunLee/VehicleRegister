@@ -54,7 +54,11 @@ namespace VehicleRegister.ServiceLayer
             item.Id = categories.Id;
             item.Name = categories.Name;
             item.StartRange = categories.StartRange;
-            item.FinishRange = categories.FinishRange;
+            if(categories.FinishRange != null)
+            {
+                item.FinishRange = (int)categories.FinishRange;
+            }
+            
             item.IconPath = categories.IconPath;
                        
             return item;

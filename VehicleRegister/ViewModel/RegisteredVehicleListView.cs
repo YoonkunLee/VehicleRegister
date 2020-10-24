@@ -1,25 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace VehicleRegister.Model
+namespace VehicleRegister.ViewModel
 {
-    public class RegisteredVehicle
+    public class RegisteredVehicleListView
     {
-        [Key]
         public Guid Id { get; set; }
-        [Required]
+        public int IndexNumber { get; set; } 
         public string OwnerName { get; set; }
-        [Required]
         public string Manufacturer { get; set; }
-        [Required]
         public string Year { get; set; }
-        [Required]
         public float Weight { get; set; }
-        [Required]
         public string Category { get; set; }
-        [Required]
         public string IconPath { get; set; }
+
     }
 }

@@ -14,7 +14,7 @@ namespace VehicleRegister.Model
         [Required]
         public int StartRange { get; set; }
 
-        public int FinishRange { get; set; }
+        public int? FinishRange { get; set; }
         [Required]
         public string IconPath { get; set; }
     }

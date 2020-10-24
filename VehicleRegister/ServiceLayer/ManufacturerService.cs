@@ -11,14 +11,7 @@ namespace VehicleRegister.ServiceLayer
         public Manufacturer ConvertViewModelToData(ManufacturerView manufacturer)
         {
             var newManufacturer = new Manufacturer();
-            if(manufacturer.Id == null)
-            {
-                newManufacturer.Id = Guid.NewGuid();
-            }
-            else
-            {
-                newManufacturer.Id = manufacturer.Id;
-            }
+
             newManufacturer.Name = manufacturer.name;
 
             return newManufacturer;
