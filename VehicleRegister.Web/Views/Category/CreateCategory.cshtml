@@ -2,18 +2,24 @@
 @{
 }
 
-<h1>This is Create Category Page</h1>
+<h3 class="titleMargin">Create Category</h3>
 
 @using (Html.BeginForm("Create", "Category", FormMethod.Post))
 {
     @Html.LabelFor(m => m.Name)
     @Html.TextBoxFor(m => m.Name)
-    @Html.LabelFor(m => m.StartRange)
-    @Html.TextBoxFor(m => m.StartRange)
-    @Html.LabelFor(m => m.FinishRange)
-    @Html.TextBoxFor(m => m.FinishRange)
+    <div class="row">
+        <div class="col s6">
+            @Html.LabelFor(m => m.StartRange)
+            @Html.TextBoxFor(m => m.StartRange)
+        </div>
+        <div class="col s6">
+            @Html.LabelFor(m => m.FinishRange)
+            @Html.TextBoxFor(m => m.FinishRange)
+        </div>
+    </div>
     @Html.LabelFor(m => m.IconPath)
     @Html.TextBoxFor(m => m.IconPath)
 
-    <input type="submit" value="Submit" />
+    <input class="waves-effect waves-light btn-large blue submitButton" type="submit" value="Submit" />
 }

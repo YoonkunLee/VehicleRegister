@@ -3,10 +3,14 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
-@Html.ActionLink("Create", "CreateCategory", "Category")
+<h3 class="floatLeft titleMargin">Category List</h3>
+<a class="floatRight" href='@Url.Action("CreateCategory", "Category")'>
+    <input class="waves-effect waves-light btn-large blue" type="button" value="Create" />
+</a>
+
+
 <table>
-    <thead>
+    <thead class="boldTitle">
         <tr>
             <td>No.</td>
             <td>Name</td>
@@ -17,19 +21,19 @@
         </tr>
     </thead>
     <tbody>
-        @foreach(var item in Model)
+        @foreach (var item in Model)
         {
-        <tr>
-            <td>@item.IndexNumber</td>
-            <td>@item.Name</td>
-            <td>@item.StartRange</td>
-            <td>@item.FinishRange</td>
-            <td><img src="@item.IconPath" /></td>
-            <td>
-                @Html.ActionLink("Update", "UpdateCategory", "Category", new { id = item.Id })
-                @Html.ActionLink("Delete", "DeleteCategory", "Category", new { id = item.Id })
-            </td>
-        </tr>
+            <tr>
+                <td>@item.IndexNumber</td>
+                <td>@item.Name</td>
+                <td>@item.StartRange</td>
+                <td>@item.FinishRange</td>
+                <td><img src="@item.IconPath" /></td>
+                <td>
+                    @Html.ActionLink("Update", "UpdateCategory", "Category", new { id = item.Id }, new { @class = "waves-effect waves-light btn-small" })
+                    @Html.ActionLink("Delete", "DeleteCategory", "Category", new { id = item.Id }, new { @class = "waves-effect waves-light btn-small red" })
+                </td>
+            </tr>
         }
     </tbody>
 </table>

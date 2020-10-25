@@ -1,0 +1,30 @@
+﻿@model VehicleRegister.ViewModel.RegisteredVehicleView
+@{
+    ViewData["Title"] = "CreateRegistedVehical";
+}
+
+<h3 class="titleMargin">Create Registed Vehicle</h3>
+
+@using (Html.BeginForm("Create", "RegisteredVehicle", FormMethod.Post))
+{
+    @Html.LabelFor(m => m.OwnerName)
+    @Html.TextBoxFor(m => m.OwnerName)
+    @Html.LabelFor(m => m.Manufacturer)
+    <div class="input-field col s12">
+        <select class="browser-default" id="manufacturer" name="manufacturer">
+            <option value="" disabled selected>Choose your Manufacturer</option>
+            @foreach (var manufacturer in ViewBag.Manufacturer)
+            {
+                <option value="@manufacturer.Name">@manufacturer.Name</option>
+
+            }
+        </select>
+    </div>
+    @Html.LabelFor(m => m.Year)
+    @Html.TextBoxFor(m => m.Year, "{ yyyy }")
+    @Html.LabelFor(m => m.Weight)
+    @Html.TextBoxFor(m => m.Weight)
+
+    <input class="waves-effect waves-light btn-large submitButton blue" type="submit" value="Submit" />
+}
+

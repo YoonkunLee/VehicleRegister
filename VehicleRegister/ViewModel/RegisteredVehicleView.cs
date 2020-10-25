@@ -10,7 +10,7 @@ namespace VehicleRegister.ViewModel
         public Guid Id { get; set; }
         public string OwnerName { get; set; }
         public string Manufacturer { get; set; }
-        public string Year { get; set; }
+        public string Year { get; set; }  
         public float Weight { get; set; }
     }
 }

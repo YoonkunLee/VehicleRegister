@@ -3,7 +3,7 @@
     ViewData["Title"] = "UpdateCategory";
 }
 
-<h1>UpdateCategory</h1>
+<h3 class="titleMargin">Update Category</h3>
 @using (Html.BeginForm("UpdateCategory", "Category", FormMethod.Post))
 {
     @Html.LabelFor(m => m.Name)
@@ -15,5 +15,5 @@
     @Html.LabelFor(m => m.IconPath)
     @Html.TextBoxFor(m => m.IconPath)
 
-    <input type="submit" value="Submit" />
+    <input class="waves-effect waves-light btn-large blue submitButton" type="submit" value="Submit" />
 }

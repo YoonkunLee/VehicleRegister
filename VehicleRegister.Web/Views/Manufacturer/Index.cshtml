@@ -3,14 +3,13 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
-
-<a href='@Url.Action("CreateManufacturer","Manufacturer")'>
-    <input type="button" value="Create" />
+<h3 class="floatLeft titleMargin">Manufacturer List</h3>
+<a class="floatRight" href='@Url.Action("CreateManufacturer","Manufacturer")'>
+    <input class="waves-effect waves-light btn-large blue" type="button" value="Create" />
 </a>
 
 <table>
-    <thead>
+    <thead class="boldTitle">
         <tr>
             <td>No.</td>
             <td>Manufacturer</td>
@@ -24,8 +23,8 @@
                 <td>@item.IndexNumber</td>
                 <td>@item.Name</td>
                 <td>
-                    @Html.ActionLink("Update", "UpdateManufacturer", "Manufacturer", new { id = item.Id }) 
-                    @Html.ActionLink("Delete", "DeleteManufacturer", "Manufacturer", new { id = item.Id })
+                    @Html.ActionLink("Update", "UpdateManufacturer", "Manufacturer", new { id = item.Id }, new { @class = "waves-effect waves-light btn-small" }) 
+                    @Html.ActionLink("Delete", "DeleteManufacturer", "Manufacturer", new { id = item.Id }, new { @class = "waves-effect waves-light btn-small red" })
                 </td>
             </tr>
         }

@@ -3,12 +3,12 @@
     ViewData["Title"] = "CreateManufacturer";
 }
 
-<h1>CreateManufacturer</h1>
+<h3 class="titleMargin">Create Manufacturer</h3>
 
 @using (Html.BeginForm("Create", "Manufacturer", FormMethod.Post))
 {
-    @Html.LabelFor(m => m.Name);
-    @Html.TextBoxFor(m => m.Name);
+    @Html.LabelFor(m => m.Name)
+    @Html.TextBoxFor(m => m.Name)
 
-    <input type="submit" value="Submit" />
+    <input class="waves-effect waves-light btn-large blue submitButton" type="submit" value="Submit" />
 }

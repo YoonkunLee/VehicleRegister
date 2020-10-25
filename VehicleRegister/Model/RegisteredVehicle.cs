@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace VehicleRegister.Model
@@ -8,6 +9,7 @@ namespace VehicleRegister.Model
     public class RegisteredVehicle
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
         [Required]
         [RegularExpression(@"[a-zA-Z']")]

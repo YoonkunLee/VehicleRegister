@@ -3,12 +3,12 @@
     ViewData["Title"] = "UpdateManufacturer";
 }
 
-<h1>Update Manufacturer</h1>
+<h3 class="titleMargin">Update Manufacturer</h3>
 @using(Html.BeginForm("UpdateManufacturer", "Manufacturer", FormMethod.Post))
 {
     @Html.HiddenFor(m => m.Id)
     @Html.LabelFor(m => m.name)
     @Html.TextBoxFor(m => m.name)
 
-    <input type="submit" value="Submit" />
+    <input class="waves-effect waves-light btn-large blue submitButton" type="submit" value="Submit" />
 }

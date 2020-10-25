@@ -10,7 +10,7 @@ using VehicleRegister.ViewModel;
 
 namespace VehicleRegister.Web.Controllers
 {
-    public class RegistedVehicleController : Controller
+    public class RegisteredVehicleController : Controller
     {
         RegisteredVehicleDataAccess _vehicle;
         RegisteredVehicleService _service;
@@ -18,7 +18,7 @@ namespace VehicleRegister.Web.Controllers
         CategoryDataAccess _category;
 
 
-        public RegistedVehicleController()
+        public RegisteredVehicleController()
         {
             _vehicle = new RegisteredVehicleDataAccess();
             _service = new RegisteredVehicleService();
@@ -34,7 +34,7 @@ namespace VehicleRegister.Web.Controllers
             return View(registeredVehiclesView);
         }
 
-        public IActionResult CreateRegistedVehical()
+        public IActionResult CreateRegisteredVehicle()
         {
             ViewBag.Manufacturer = _manufacturer.CollectManufacturerList();
             return View();
@@ -47,10 +47,10 @@ namespace VehicleRegister.Web.Controllers
             registered = _service.ConvertViewToData(vehicle, categories);
             _vehicle.Add(registered);
 
-            return RedirectToAction("Index", "RegistedVehicle");
+            return RedirectToAction("Index", "RegisteredVehicle");
         }
 
-        public IActionResult UpdateRegistedVehicle(Guid id)
+        public IActionResult UpdateRegisteredVehicle(Guid id)
         {
             var item = _vehicle.Find(id);
             var itemView = _service.ConvertDataToView(item);
@@ -59,21 +59,21 @@ namespace VehicleRegister.Web.Controllers
         }
 
         [HttpPost]
-        [Route("/RegistedVehicle/UpdateRegistedVehicle/{id}")]
-        public IActionResult UpdateRegistedVehicle(RegisteredVehicleView registeredVehicle)
+        [Route("/RegisteredVehicle/UpdateRegisteredVehicle/{id}")]
+        public IActionResult UpdateRegisteredVehicle(RegisteredVehicleView registeredVehicle)
         {
             var categories = _category.CollectCategoryList();
             var convertedItem = _service.ConvertViewToData(registeredVehicle, categories);
             _vehicle.Update(convertedItem);
 
-            return RedirectToAction("Index", "RegistedVehicle");
+            return RedirectToAction("Index", "RegisteredVehicle");
         }
 
-        public IActionResult DeleteRegistedVehicle(Guid id)
+        public IActionResult DeleteRegisteredVehicle(Guid id)
         {
             _vehicle.Delete(id);
 
-            return RedirectToAction("index", "RegistedVehicle");
+            return RedirectToAction("Index", "RegisteredVehicle");
         }
 
     }

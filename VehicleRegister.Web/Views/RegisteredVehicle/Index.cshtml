@@ -3,10 +3,12 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
-@Html.ActionLink("Create", "CreateRegistedVehical", "RegistedVehicle")
+<h3 class="floatLeft titleMargin">Registered Vehicle List</h3>
+<a class="floatRight" href='@Url.Action("CreateRegisteredVehicle", "RegisteredVehicle")'>
+    <input class="waves-effect waves-light btn-large blue" type="button" value="Create" />
+</a>
 <table>
-    <thead>
+    <thead class="boldTitle">
         <tr>
             <td>No.</td>
             <td>Owner</td>
@@ -26,12 +28,12 @@
             <td>@item.OwnerName</td>
             <td>@item.Manufacturer</td>
             <td>@item.Year</td>
-            <td>@item.Weight</td>
+            <td>@item.Weight kg</td>
             <td>@item.Category</td>
             <td><img src="@item.IconPath" /></td>
             <td>
-                @Html.ActionLink("Update", "UpdateRegistedVehicle", "RegistedVehicle", new { id = item.Id })
-                @Html.ActionLink("Delete", "DeleteRegistedVehicle", "RegistedVehicle", new { id = item.Id })
+                @Html.ActionLink("Update", "UpdateRegisteredVehicle", "RegisteredVehicle", new { id = item.Id }, new { @class = "waves-effect waves-light btn-small" })
+                @Html.ActionLink("Delete", "DeleteRegisteredVehicle", "RegisteredVehicle", new { id = item.Id }, new { @class = "waves-effect waves-light btn-small red" })
             </td>
         </tr>
         }
