@@ -10,6 +10,7 @@ namespace VehicleRegister.Model
         [Key]
         public Guid Id { get; set; }
         [Required]
+        [RegularExpression(@"[a-zA-Z']")]
         public string OwnerName { get; set; }
         [Required]
         public string Manufacturer { get; set; }

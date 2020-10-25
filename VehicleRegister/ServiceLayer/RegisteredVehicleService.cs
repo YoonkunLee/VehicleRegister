@@ -55,7 +55,7 @@ namespace VehicleRegister.ServiceLayer
                 item.Category = registeredVehicles[i].Category;
                 item.Weight = registeredVehicles[i].Weight;
                 item.Year = registeredVehicles[i].Year;
-                item.IndexNumber = i;
+                item.IndexNumber = i + 1;
                 item.IconPath = "/CategoryIcon/" + registeredVehicles[i].IconPath;
                 list.Add(item);
             }

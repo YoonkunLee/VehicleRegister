@@ -36,6 +36,7 @@ namespace VehicleRegister.Web.Controllers
 
         public IActionResult CreateRegistedVehical()
         {
+            ViewBag.Manufacturer = _manufacturer.CollectManufacturerList();
             return View();
         }
 
@@ -53,6 +54,7 @@ namespace VehicleRegister.Web.Controllers
         {
             var item = _vehicle.Find(id);
             var itemView = _service.ConvertDataToView(item);
+            ViewBag.Manufacturer = _manufacturer.CollectManufacturerList();
             return View(itemView);
         }
 

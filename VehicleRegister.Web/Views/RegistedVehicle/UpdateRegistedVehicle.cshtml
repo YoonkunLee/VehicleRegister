@@ -10,7 +10,13 @@
     @Html.LabelFor(m => m.OwnerName)
     @Html.TextBoxFor(m => m.OwnerName)
     @Html.LabelFor(m => m.Manufacturer)
-    @Html.TextBoxFor(m => m.Manufacturer)
+    <select id="manufacturer" name="manufacturer">
+        <option value="@Model.Manufacturer">@Model.Manufacturer</option>
+        @foreach(var manufacturer in ViewBag.Manufacturer)
+        {
+            <option value="@manufacturer.Name">@manufacturer.Name</option>
+        }
+    </select>
     @Html.LabelFor(m => m.Year)
     @Html.TextBoxFor(m => m.Year)
     @Html.LabelFor(m => m.Weight)
