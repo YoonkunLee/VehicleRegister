@@ -17,50 +17,12 @@ namespace VehicleRegister.Data.MSSQL.DataAccess
             context.SaveChanges();
         }
 
-        public List<RegisteredVehicle> CollectRegisteredVehicleList(int sortby)
+        public DbSet<RegisteredVehicle> CollectRegisteredVehicleList()
         {
             DataContext1 context = new DataContext1();
             var list = context.RegisteredVehicles;
-            List<RegisteredVehicle> result = new List<RegisteredVehicle>();
-
-            if (sortby == 1)
-            {
-                result = list.OrderBy(m => m.OwnerName).ToList();
-            }
-            else if(sortby == 2)
-            {
-                result = list.OrderByDescending(m => m.OwnerName).ToList();
-            }
-            else if (sortby == 3)
-            {
-                result = list.OrderBy(m => m.Manufacturer).ToList();
-            }
-            else if (sortby == 4)
-            {
-                result = list.OrderByDescending(m => m.Manufacturer).ToList();
-            }
-            else if (sortby == 5)
-            {
-                result = list.OrderBy(m => m.Year).ToList();
-            }
-            else if (sortby == 6)
-            {
-                result = list.OrderByDescending(m => m.Year).ToList();
-            }
-            else if (sortby == 7)
-            {
-                result = list.OrderBy(m => m.Weight).ToList();
-            }
-            else if (sortby == 8)
-            {
-                result = list.OrderByDescending(m => m.Weight).ToList();
-            }
-            else
-            {
-                result = list.OrderBy(m => m.OwnerName).ToList();
-            }
-            
-            return result;
+                       
+            return list;
         }
 
         public RegisteredVehicle Find(Guid id)

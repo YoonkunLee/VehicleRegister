@@ -26,13 +26,45 @@ namespace VehicleRegister.Web.Controllers
             _category = new CategoryDataAccess();
         }
 
-        public IActionResult Index(int sort)
+        public IActionResult Index(string sortOrder)
         {
-            List<RegisteredVehicle> registeredVehicles = new List<RegisteredVehicle>();
+            ViewBag.OwnerSortParam = String.IsNullOrEmpty(sortOrder) ? "OwnerName_desc" : "";
+            ViewBag.ManufacturerSortParam = sortOrder == "Manufacturer" ? "ManufacturerName_desc" : "Manufacturer";
+            ViewBag.YearSortParam = sortOrder == "Year" ? "Year_desc" : "Year";
+            ViewBag.WeightSortParam = sortOrder == "Weight" ? "Weight_desc" : "Weight";
             List<RegisteredVehicleListView> registeredVehiclesView = new List<RegisteredVehicleListView>();
-            registeredVehicles = _vehicle.CollectRegisteredVehicleList(sort);
-            registeredVehiclesView = _service.ConvertDataToListView(registeredVehicles);
+            var registeredVehicles = _vehicle.CollectRegisteredVehicleList().AsQueryable<RegisteredVehicle>();
 
+            switch (sortOrder)
+            {
+                case "OwnerName_desc":
+                    registeredVehicles = registeredVehicles.OrderByDescending(m => m.OwnerName);
+                    break;
+                default:
+                    registeredVehicles = registeredVehicles.OrderBy(m => m.OwnerName);
+                    break;
+                case "ManufacturerName_desc":
+                    registeredVehicles = registeredVehicles.OrderByDescending(m => m.Manufacturer);
+                    break;
+                case "Manufacturer":
+                    registeredVehicles = registeredVehicles.OrderBy(m => m.Manufacturer);
+                    break;
+                case "Year_desc":
+                    registeredVehicles = registeredVehicles.OrderByDescending(m => m.Year);
+                    break;
+                case "Year":
+                    registeredVehicles = registeredVehicles.OrderBy(m => m.Year);
+                    break;
+                case "Weight_desc":
+                    registeredVehicles = registeredVehicles.OrderByDescending(m => m.Weight);
+                    break;
+                case "Weight":
+                    registeredVehicles = registeredVehicles.OrderBy(m => m.Weight);
+                    break;
+            }
+            
+            registeredVehiclesView = _service.ConvertDataToListView(registeredVehicles.ToList());
+    
             return View(registeredVehiclesView);
         }
 
