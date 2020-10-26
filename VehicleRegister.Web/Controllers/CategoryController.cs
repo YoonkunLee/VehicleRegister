@@ -15,10 +15,12 @@ namespace VehicleRegister.Web.Controllers
     {       
         CategoryDataAccess _category;
         CategoryService _service;
+        RegisteredVehicleDataAccess _vehicle;
         public CategoryController()
         {
             _category = new CategoryDataAccess();
             _service = new CategoryService();
+            _vehicle = new RegisteredVehicleDataAccess();
         }
 
         public IActionResult Index()
@@ -37,8 +39,47 @@ namespace VehicleRegister.Web.Controllers
         {
             var newCategory = _service.ConvertViewToData(category);
             _category.Add(newCategory);
-
+            CategoryUpdate();
             return RedirectToAction("Index", "Category");
+        }
+
+
+        public void CategoryUpdate()
+        {
+            var categories = _category.CollectCategoryList();
+            var vehicle = _vehicle.CollectRegisteredVehicleList().ToList();
+
+            for (var i = 0; i < vehicle.Count; i++)
+            {
+                vehicle[i] = DefineCategory(categories, vehicle[i]);
+                _vehicle.Update(vehicle[i]);
+            }
+
+        }
+
+        public RegisteredVehicle DefineCategory(List<Category> categories, RegisteredVehicle vehicle)
+        {
+            for (var i = 0; i < categories.Count; i++)
+            {
+                if (categories[i].FinishRange == null)
+                {
+                    if (vehicle.Weight >= categories[i].StartRange)
+                    {
+                        vehicle.IconPath = categories[i].IconPath;
+                        vehicle.Category = categories[i].Name;
+
+                    }
+                }
+                else
+                {
+                    if (vehicle.Weight >= categories[i].StartRange && vehicle.Weight < categories[i].FinishRange)
+                    {
+                        vehicle.IconPath = categories[i].IconPath;
+                        vehicle.Category = categories[i].Name;
+                    }
+                }
+            }
+            return vehicle;
         }
 
         public IActionResult UpdateCategory(Guid id)

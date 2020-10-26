@@ -17,7 +17,7 @@
         @Html.LabelFor(m => m.Manufacturer)
         <div class="input-field col s12">
             <select class="browser-default" id="manufacturer" name="manufacturer">
-                <option value="@Model.Manufacturer" disabled selected>@Model.Manufacturer</option>
+                <option value="@Model.Manufacturer" selected>@Model.Manufacturer</option>
                 @foreach (var manufacturer in ViewBag.Manufacturer)
                 {
                     <option value="@manufacturer.Name">@manufacturer.Name</option>
