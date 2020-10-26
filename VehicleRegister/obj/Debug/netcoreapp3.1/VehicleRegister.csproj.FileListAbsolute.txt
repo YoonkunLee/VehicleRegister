@@ -19,3 +19,4 @@ C:\Users\Yoonkun Lee\Desktop\projects\New Delhi\VehicleRegister\VehicleRegister\
 C:\Users\Yoonkun Lee\Desktop\projects\New Delhi\VehicleRegister\VehicleRegister\obj\Debug\netcoreapp3.1\VehicleRegister.AssemblyInfo.cs
 C:\Users\Yoonkun Lee\Desktop\projects\New Delhi\VehicleRegister\VehicleRegister\obj\Debug\netcoreapp3.1\VehicleRegister.dll
 C:\Users\Yoonkun Lee\Desktop\projects\New Delhi\VehicleRegister\VehicleRegister\obj\Debug\netcoreapp3.1\VehicleRegister.pdb
+C:\Users\Yoonkun Lee\Desktop\projects\New Delhi\VehicleRegister\VehicleRegister\obj\Debug\netcoreapp3.1\VehicleRegister.csprojAssemblyReference.cache

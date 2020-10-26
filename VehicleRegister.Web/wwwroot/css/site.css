@@ -92,3 +92,7 @@ body {
 .boldTitle {
     font-weight:bold;
 }
+
+.text-danger{
+    width: 100%;
+}

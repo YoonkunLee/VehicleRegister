@@ -7,6 +7,18 @@
 <a class="floatRight" href='@Url.Action("CreateRegisteredVehicle", "RegisteredVehicle")'>
     <input class="waves-effect waves-light btn-large blue" type="button" value="Create" />
 </a>
+<div class="input-field col s12">
+    <select onchange=@Url.Action("Index", "RegisteredVehicle") class="browser-default sort" id="sort" name="sort">
+        <option value="1">Owner's Name Ascending</option>
+        <option value="2">Owner's Name Descending</option>
+        <option value="3">Manufacturer Ascending</option>
+        <option value="4">Manufacturer Descending</option>
+        <option value="5">Year Oldest</option>
+        <option value="6">Year Newest</option>
+        <option value="7">Weight Lowest</option>
+        <option value="8">Weight Highest</option>
+    </select>
+</div>
 <table>
     <thead class="boldTitle">
         <tr>
@@ -23,19 +35,29 @@
     <tbody>
         @foreach (var item in Model)
         {
-        <tr>
-            <td>@item.IndexNumber</td>
-            <td>@item.OwnerName</td>
-            <td>@item.Manufacturer</td>
-            <td>@item.Year</td>
-            <td>@item.Weight kg</td>
-            <td>@item.Category</td>
-            <td><img src="@item.IconPath" /></td>
-            <td>
-                @Html.ActionLink("Update", "UpdateRegisteredVehicle", "RegisteredVehicle", new { id = item.Id }, new { @class = "waves-effect waves-light btn-small" })
-                @Html.ActionLink("Delete", "DeleteRegisteredVehicle", "RegisteredVehicle", new { id = item.Id }, new { @class = "waves-effect waves-light btn-small red" })
-            </td>
-        </tr>
+            <tr>
+                <td>@item.IndexNumber</td>
+                <td>@item.OwnerName</td>
+                <td>@item.Manufacturer</td>
+                <td>@item.Year</td>
+                <td>@item.Weight kg</td>
+                <td>@item.Category</td>
+                <td><img src="@item.IconPath" /></td>
+                <td>
+                    @Html.ActionLink("Update", "UpdateRegisteredVehicle", "RegisteredVehicle", new { id = item.Id }, new { @class = "waves-effect waves-light btn-small" })
+                    @Html.ActionLink("Delete", "DeleteRegisteredVehicle", "RegisteredVehicle", new { id = item.Id }, new { @class = "waves-effect waves-light btn-small red" })
+                </td>
+            </tr>
         }
     </tbody>
 </table>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+@*<script>
+    $("#sort").change(function () {
+        var number = $("#sort").val();
+
+        console.log(sort)
+        @Url.Action("Index", "RegisteredVehicle")
+        });   
+    }); 
+</script>*@

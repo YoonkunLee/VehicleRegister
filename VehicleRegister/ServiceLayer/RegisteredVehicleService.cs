@@ -75,5 +75,15 @@ namespace VehicleRegister.ServiceLayer
          
             return item;
         }
+
+        //public int[] SortingOption(string sortby)
+        //{
+        //    int[] option = new int[1];
+
+        //    if(sortby.Equals(""))
+
+
+        //    return option;
+        //}
     }
 }
