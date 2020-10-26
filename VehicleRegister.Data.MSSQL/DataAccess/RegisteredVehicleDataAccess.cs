@@ -12,14 +12,14 @@ namespace VehicleRegister.Data.MSSQL.DataAccess
     {
         public void Add(RegisteredVehicle vehicle)
         {
-            DBContext context = new DBContext();
+            DataContext1 context = new DataContext1();
             context.RegisteredVehicles.Add(vehicle);
             context.SaveChanges();
         }
 
         public DbSet<RegisteredVehicle> CollectRegisteredVehicleList()
         {
-            DBContext context = new DBContext();
+            DataContext1 context = new DataContext1();
             var list = context.RegisteredVehicles;
                        
             return list;
@@ -27,14 +27,14 @@ namespace VehicleRegister.Data.MSSQL.DataAccess
 
         public RegisteredVehicle Find(Guid id)
         {
-            DBContext context = new DBContext();
+            DataContext1 context = new DataContext1();
             var item = context.RegisteredVehicles.First<RegisteredVehicle>(m => m.Id == id);
             return item;
         }
 
         public void Update(RegisteredVehicle vehicle)
         {
-            DBContext context = new DBContext();
+            DataContext1 context = new DataContext1();
             var item = Find(vehicle.Id);
             item = vehicle;
             context.Update(item);
@@ -43,7 +43,7 @@ namespace VehicleRegister.Data.MSSQL.DataAccess
 
         public void Delete(Guid id)
         {
-            DBContext context = new DBContext();
+            DataContext1 context = new DataContext1();
             var item = context.RegisteredVehicles.First(m => m.Id == id);
             context.Remove(item);
             context.SaveChanges();

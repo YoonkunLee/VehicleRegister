@@ -16,14 +16,14 @@ namespace VehicleRegister.Data.MSSQL.DataAccess
 
         public void Add(Category category)
         {
-            DBContext context = new DBContext();
+            DataContext1 context = new DataContext1();
             context.Categories.Add(category);
             context.SaveChanges();
         }
 
         public List<Category> CollectCategoryList()
         {
-            DBContext context = new DBContext();
+            DataContext1 context = new DataContext1();
             List<Category> result = new List<Category>();
             result = context.Categories.OrderBy(m => m.StartRange).ToList();
 
@@ -32,14 +32,14 @@ namespace VehicleRegister.Data.MSSQL.DataAccess
 
         public Category Find(Guid id)
         {
-            DBContext context = new DBContext();
+            DataContext1 context = new DataContext1();
             var item = context.Categories.First<Category>(m => m.Id == id);
             return item;
         }
 
         public void Update(Category category)
         {
-            DBContext context = new DBContext();
+            DataContext1 context = new DataContext1();
             var item = Find(category.Id);
             item = category;
             context.Update(item);
@@ -48,7 +48,7 @@ namespace VehicleRegister.Data.MSSQL.DataAccess
 
         public void Delete(Guid id)
         {
-            DBContext context = new DBContext();
+            DataContext1 context = new DataContext1();
             var item = Find(id);
             context.Categories.Remove(item);
             context.SaveChanges();

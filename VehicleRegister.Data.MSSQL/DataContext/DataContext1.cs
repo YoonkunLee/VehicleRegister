@@ -6,20 +6,19 @@ using VehicleRegister.Model;
 
 namespace VehicleRegister.Data.MSSQL.DataContext
 {
-    public class DBContext : DbContext
+    public class DataContext1 : DbContext
     {
-        public DBContext()
+        public DataContext1()
         {
 
         }
 
-        public DbSet<Category> Categories;
-        public DbSet<Manufacturer> Manufacturers;
-        public DbSet<RegisteredVehicle> RegisteredVehicles;
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Manufacturer> Manufacturers { get; set; }
+        public DbSet<RegisteredVehicle> RegisteredVehicles { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //**Put MSSQL Server connection string here**
             optionsBuilder.UseSqlServer(@"");
         }
     }

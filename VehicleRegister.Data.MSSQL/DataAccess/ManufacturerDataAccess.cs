@@ -17,14 +17,14 @@ namespace VehicleRegister.Data.MSSQL.DataAccess
 
         public void AddManufacturer(Manufacturer manufacturer)
         {
-            DBContext context = new DBContext();
+            DataContext1 context = new DataContext1();
             context.Manufacturers.Add(manufacturer);
             context.SaveChanges();
         }
 
         public List<Manufacturer> CollectManufacturerList()
         {
-            DBContext context = new DBContext();
+            DataContext1 context = new DataContext1();
             List<Manufacturer> list = new List<Manufacturer>();
             list = context.Manufacturers.OrderBy(m => m.Name).ToList();
 
@@ -33,7 +33,7 @@ namespace VehicleRegister.Data.MSSQL.DataAccess
 
         public Manufacturer Find(Guid id)
         {
-            DBContext context = new DBContext();
+            DataContext1 context = new DataContext1();
             var foundManufacturer = new Manufacturer();
             foundManufacturer = context.Manufacturers.First<Manufacturer>(m => m.Id == id);
             
@@ -42,14 +42,14 @@ namespace VehicleRegister.Data.MSSQL.DataAccess
 
         public void Delete(Manufacturer manufacturer)
         {
-            DBContext context = new DBContext();
+            DataContext1 context = new DataContext1();
             context.Manufacturers.Remove(manufacturer);
             context.SaveChanges();
         }
 
         public void Update(Manufacturer manfacturer)
         {
-            DBContext context = new DBContext();
+            DataContext1 context = new DataContext1();
             var found = context.Manufacturers.First(m => m.Id == manfacturer.Id);
             found.Name = manfacturer.Name;
             context.SaveChanges();
