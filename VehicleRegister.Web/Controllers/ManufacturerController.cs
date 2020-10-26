@@ -69,7 +69,6 @@ namespace VehicleRegister.Web.Controllers
         }
 
         [HttpPost]
-        [Route("/Manufacturer/UpdateManufacturer/{id}")]
         public IActionResult UpdateManufacturer(ManufacturerView manufacturerView)
         {
             var manufacturer = _service.ConvertViewModelToData(manufacturerView);

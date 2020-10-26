@@ -17,7 +17,6 @@ namespace VehicleRegister.Web.Controllers
         ManufacturerDataAccess _manufacturer;
         CategoryDataAccess _category;
 
-
         public RegisteredVehicleController()
         {
             _vehicle = new RegisteredVehicleDataAccess();
@@ -118,6 +117,5 @@ namespace VehicleRegister.Web.Controllers
 
             return RedirectToAction("Index", "RegisteredVehicle");
         }
-
     }
 }
