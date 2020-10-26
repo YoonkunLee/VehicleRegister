@@ -1,0 +1,28 @@
+To start the project, Need to follow some steps. 
+
+1. Set Up Connection String
+    a) Go to "DataContext1.cs" file (VehicleRegister.Data.MSSQL project -> DataContext -> DataContex1.cs)
+    b) Find "optionsBuilder.UseSqlServer(@"");" in "OnConfiguring" Method
+    c) Between quotation mark "", write *Connection String from mssql database. 
+
+2. Create Database Table by Data Model
+    a) Go to Package Manager Console ( View -> Other Windows -> Package Manager Console)
+    b) Set "Default project:" in Package ManagerConsole, as "VehicleRegister.Data.MSSQL"
+    c) Write "Add-Migration (migration name)" ex) Add-Migration FirstMigration
+    d) Write "Update-Database"
+    e) Check Database Table
+
+3. Set Up Default DataBase
+    a) Go to "DefaultDB.sql" file (VehicleRegister.Data.MSSQL project -> DataContext -> DefaultDB.sql)
+    b) Press Execute button or Press CTL + SHIFT + E 
+    c) Insert Server, Database Name
+    d) Check Database Table
+
+*How to get Connection string
+1. Press CTL + ALT + S
+2. Right Click in DataConnections -> Add Connections
+3. Insert Server Name
+4. Insert Database Name
+5. Click Ok (Then you will see new item in DataConnections)
+6. Click new item and press ALT + ENTER
+7. In Connection section, you will see Connection String

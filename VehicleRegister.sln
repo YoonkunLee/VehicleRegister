@@ -13,9 +13,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "About Project", "About Proj
 	ProjectSection(SolutionItems) = preProject
 		AddedPackages.txt = AddedPackages.txt
 		HowToRun.txt = HowToRun.txt
+		ReadMe.txt = ReadMe.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Thinking Process", "Thinking Process", "{C68EFFD4-5867-4B11-A396-0257164A72AC}"
+	ProjectSection(SolutionItems) = preProject
+		E:\Download\ThinkingProcess1.PNG = E:\Download\ThinkingProcess1.PNG
+		E:\Download\ThinkingProcess2.PNG = E:\Download\ThinkingProcess2.PNG
+		E:\Download\ThinkingProcess3.PNG = E:\Download\ThinkingProcess3.PNG
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

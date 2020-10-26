@@ -8515,11 +8515,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Yoonkun Lee\\Desktop\\projects\\New Delhi\\VehicleRegister\\VehicleRegister.Web\\VehicleRegister.Web.csproj",
+      "projectUniqueName": "C:\\Users\\Yoonkun Lee\\Desktop\\New Gate\\VehicleRegister\\VehicleRegister.Web\\VehicleRegister.Web.csproj",
       "projectName": "VehicleRegister.Web",
-      "projectPath": "C:\\Users\\Yoonkun Lee\\Desktop\\projects\\New Delhi\\VehicleRegister\\VehicleRegister.Web\\VehicleRegister.Web.csproj",
+      "projectPath": "C:\\Users\\Yoonkun Lee\\Desktop\\New Gate\\VehicleRegister\\VehicleRegister.Web\\VehicleRegister.Web.csproj",
       "packagesPath": "C:\\Users\\Yoonkun Lee\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Yoonkun Lee\\Desktop\\projects\\New Delhi\\VehicleRegister\\VehicleRegister.Web\\obj\\",
+      "outputPath": "C:\\Users\\Yoonkun Lee\\Desktop\\New Gate\\VehicleRegister\\VehicleRegister.Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -8538,11 +8538,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Yoonkun Lee\\Desktop\\projects\\New Delhi\\VehicleRegister\\VehicleRegister.Data.MSSQL\\VehicleRegister.Data.MSSQL.csproj": {
-              "projectPath": "C:\\Users\\Yoonkun Lee\\Desktop\\projects\\New Delhi\\VehicleRegister\\VehicleRegister.Data.MSSQL\\VehicleRegister.Data.MSSQL.csproj"
+            "C:\\Users\\Yoonkun Lee\\Desktop\\New Gate\\VehicleRegister\\VehicleRegister.Data.MSSQL\\VehicleRegister.Data.MSSQL.csproj": {
+              "projectPath": "C:\\Users\\Yoonkun Lee\\Desktop\\New Gate\\VehicleRegister\\VehicleRegister.Data.MSSQL\\VehicleRegister.Data.MSSQL.csproj"
             },
-            "C:\\Users\\Yoonkun Lee\\Desktop\\projects\\New Delhi\\VehicleRegister\\VehicleRegister\\VehicleRegister.csproj": {
-              "projectPath": "C:\\Users\\Yoonkun Lee\\Desktop\\projects\\New Delhi\\VehicleRegister\\VehicleRegister\\VehicleRegister.csproj"
+            "C:\\Users\\Yoonkun Lee\\Desktop\\New Gate\\VehicleRegister\\VehicleRegister\\VehicleRegister.csproj": {
+              "projectPath": "C:\\Users\\Yoonkun Lee\\Desktop\\New Gate\\VehicleRegister\\VehicleRegister\\VehicleRegister.csproj"
             }
           }
         }
