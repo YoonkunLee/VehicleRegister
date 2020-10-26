@@ -5743,11 +5743,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Yoonkun Lee\\Desktop\\New Gate\\VehicleRegister\\VehicleRegister.Data.MSSQL\\VehicleRegister.Data.MSSQL.csproj",
+      "projectUniqueName": "C:\\Users\\Yoonkun Lee\\Desktop\\New Gate\\New Folder\\VehicleRegister\\VehicleRegister.Data.MSSQL\\VehicleRegister.Data.MSSQL.csproj",
       "projectName": "VehicleRegister.Data.MSSQL",
-      "projectPath": "C:\\Users\\Yoonkun Lee\\Desktop\\New Gate\\VehicleRegister\\VehicleRegister.Data.MSSQL\\VehicleRegister.Data.MSSQL.csproj",
+      "projectPath": "C:\\Users\\Yoonkun Lee\\Desktop\\New Gate\\New Folder\\VehicleRegister\\VehicleRegister.Data.MSSQL\\VehicleRegister.Data.MSSQL.csproj",
       "packagesPath": "C:\\Users\\Yoonkun Lee\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Yoonkun Lee\\Desktop\\New Gate\\VehicleRegister\\VehicleRegister.Data.MSSQL\\obj\\",
+      "outputPath": "C:\\Users\\Yoonkun Lee\\Desktop\\New Gate\\New Folder\\VehicleRegister\\VehicleRegister.Data.MSSQL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5766,8 +5766,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Yoonkun Lee\\Desktop\\New Gate\\VehicleRegister\\VehicleRegister\\VehicleRegister.csproj": {
-              "projectPath": "C:\\Users\\Yoonkun Lee\\Desktop\\New Gate\\VehicleRegister\\VehicleRegister\\VehicleRegister.csproj"
+            "C:\\Users\\Yoonkun Lee\\Desktop\\New Gate\\New Folder\\VehicleRegister\\VehicleRegister\\VehicleRegister.csproj": {
+              "projectPath": "C:\\Users\\Yoonkun Lee\\Desktop\\New Gate\\New Folder\\VehicleRegister\\VehicleRegister\\VehicleRegister.csproj"
             }
           }
         }

@@ -1,5 +1,10 @@
 To start the project, Need to follow some steps. 
 
+0. Set Up VehicleRegister.Web as a defualt project
+    a) Go to Solution Explorer
+    b) Right click on "VehicleRegister.Web"
+    c) Click "Set as StartUp Project"
+
 1. Set Up Connection String
     a) Go to "DataContext1.cs" file (VehicleRegister.Data.MSSQL project -> DataContext -> DataContex1.cs)
     b) Find "optionsBuilder.UseSqlServer(@"");" in "OnConfiguring" Method
